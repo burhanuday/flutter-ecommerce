@@ -38,8 +38,14 @@ class Products with ChangeNotifier {
     ),
   ];
 
+  // var _showFavouritesOnly = false;
+
   List<Product> get items {
     return [..._items];
+  }
+
+  List<Product> get favouriteItems {
+    return _items.where((element) => element.isFavourite).toList();
   }
 
   Product findById(id) {
@@ -50,4 +56,14 @@ class Products with ChangeNotifier {
     // _items.add(value);
     notifyListeners();
   }
+
+  /* showFavouritesOnly() {
+    _showFavouritesOnly = true;
+    notifyListeners();
+  }
+
+  showAll() {
+    _showFavouritesOnly = false;
+    notifyListeners();
+  } */
 }
