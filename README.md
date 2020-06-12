@@ -1,6 +1,6 @@
-# shopapp
+# ECommerce
 
-A new Flutter project.
+An ecommerce store app built with Flutter. It follows material UI patterns and uses the Provider package for central store management.
 
 ## Getting Started
 
